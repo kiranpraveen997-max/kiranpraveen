@@ -83,7 +83,7 @@ export function ParticleBackground() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(190, 175, 225, 0.30)";
+        ctx.fillStyle = "rgba(200, 185, 235, 0.45)";
         ctx.fill();
       }
 
@@ -95,7 +95,7 @@ export function ParticleBackground() {
           const dy = a.y - b.y;
           const d2 = dx * dx + dy * dy;
           if (d2 < linkDist * linkDist) {
-            const alpha = (1 - Math.sqrt(d2) / linkDist) * 0.10;
+            const alpha = (1 - Math.sqrt(d2) / linkDist) * 0.14;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
