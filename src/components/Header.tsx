@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
@@ -16,7 +15,6 @@ const navLinks = [
 export function Header() {
   const [active, setActive] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +53,7 @@ export function Header() {
                 "rounded-md px-4 py-2 text-sm font-medium transition-colors",
                 active === link.href.slice(1)
                   ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
+                  : "text-muted-foreground hover:text-foreground",
               )}
             >
               {link.name}
@@ -86,7 +84,7 @@ export function Header() {
                   "rounded-md px-4 py-3 text-lg font-medium transition-colors",
                   active === link.href.slice(1)
                     ? "bg-primary/10 text-primary"
-                    : "text-muted-foreground hover:bg-accent hover:text-foreground"
+                    : "text-muted-foreground hover:bg-accent hover:text-foreground",
                 )}
               >
                 {link.name}
@@ -98,4 +96,3 @@ export function Header() {
     </header>
   );
 }
-
