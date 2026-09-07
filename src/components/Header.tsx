@@ -63,34 +63,39 @@ export function Header() {
           ))}
         </nav>
 
-        <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" aria-label="Open menu">
-              <Menu className="h-5 w-5" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="top" className="border-border bg-background">
-            <SheetTitle className="sr-only">Navigation menu</SheetTitle>
-            <nav className="flex flex-col gap-2 pt-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className={cn(
-                    "rounded-md px-4 py-3 text-lg font-medium transition-colors",
-                    active === link.href.slice(1)
-                      ? "bg-primary/10 text-primary"
-                      : "text-muted-foreground hover:bg-accent hover:text-foreground"
-                  )}
-                >
-                  {link.name}
-                </a>
-              ))}
-            </nav>
-          </SheetContent>
-        </Sheet>
+        <button
+          type="button"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-foreground md:hidden"
+          onClick={() => setMobileMenuOpen((v) => !v)}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileMenuOpen}
+        >
+          {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
       </div>
+
+      {mobileMenuOpen && (
+        <div className="absolute left-0 right-0 top-16 border-b border-border bg-background px-4 py-4 shadow-lg md:hidden">
+          <nav className="container mx-auto flex flex-col gap-2">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={cn(
+                  "rounded-md px-4 py-3 text-lg font-medium transition-colors",
+                  active === link.href.slice(1)
+                    ? "bg-primary/10 text-primary"
+                    : "text-muted-foreground hover:bg-accent hover:text-foreground"
+                )}
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
+
