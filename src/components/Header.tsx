@@ -15,7 +15,8 @@ const navLinks = [
 
 export function Header() {
   const [active, setActive] = useState("home");
-  const [open, setOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
