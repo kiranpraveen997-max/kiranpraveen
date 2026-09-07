@@ -10,12 +10,12 @@ type Particle = {
 };
 
 export function ParticleBackground() {
-  console.log("PB_RENDER");
+  if (typeof window !== "undefined") (window as any).__PB_RENDER = ((window as any).__PB_RENDER||0)+1;
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const glowRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    console.log("PB_EFFECT");
+    (window as any).__PB_EFFECT = ((window as any).__PB_EFFECT||0)+1;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
