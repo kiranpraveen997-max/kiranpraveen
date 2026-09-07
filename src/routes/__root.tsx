@@ -115,7 +115,6 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  useEffect(() => { console.log("ROOT_EFFECT_RAN"); }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
