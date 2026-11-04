@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.lovable",
+    "\\.tanstack",
+    "\\public",
+    "\\src",
+    "\\src\\components",
+    "\\src\\routes"
+  ],
+  "SelectedNode": "\\src\\components\\Footer.tsx",
+  "PreviewInSolutionExplorer": false
+}

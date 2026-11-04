@@ -69,14 +69,13 @@ function HomeSection() {
 
       <div className="max-w-3xl text-center">
         <p className="mb-4 text-sm font-medium uppercase tracking-widest text-accent-cyan">
-          Beginner Game Developer
+          Game Developer
         </p>
         <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-7xl">
           Hi, I'm <span className="gradient-text">Kiran Praveen</span>
         </h1>
         <p className="mx-auto mb-10 max-w-xl text-lg text-muted-foreground">
-          I'm learning to build games and interactive experiences. This is my starter portfolio —
-          replace this intro with your own story.
+          I build interactive 2D and 3D games in Unity. I love prototyping new ideas and bringing imaginative digital worlds to life.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button asChild size="lg" className="glow-purple">
@@ -110,17 +109,13 @@ function AboutSection() {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                [Placeholder] Write a short introduction here. Mention how you got into game
-                development, what excites you about it, and what you're currently learning.
+                Hi, I'm Kiran Praveen, a Unity game developer passionate about creating engaging gameplay experiences and exploring unique game mechanics.
               </p>
               <p>
-                [Placeholder] Add a sentence or two about your goals — the kinds of games you want
-                to make, the studios or indie projects you admire, or the skills you're building
-                next.
+                I enjoy building game prototypes, experimenting with new ideas, and learning new ways to bring games to life using Unity.
               </p>
               <p>
-                [Placeholder] Keep it honest and beginner-friendly. This section is easy to edit in
-                the code.
+                I also have a growing foundation in C# and am continuously working on improving my game development skills.
               </p>
             </div>
           </div>
@@ -138,9 +133,9 @@ function AboutSection() {
 function ProjectsSection() {
   const projects = [
     {
-      title: "Project One",
+      title: "Planet Of The Dead",
       description:
-        "Short placeholder description for your first game or prototype. Replace this with a real summary.",
+        "An endless wave survival shooter. The core gameplay revolves around managing an unstable weapon that constantly drains power, requiring you to eliminate enemies and retrieve their dropped energy cells to avoid certain death.",
       tags: ["Unity", "C#"],
     },
     {
@@ -171,8 +166,7 @@ function ProjectsSection() {
             Featured <span className="text-primary">Projects</span>
           </h2>
           <p className="mx-auto max-w-xl text-muted-foreground">
-            Placeholder projects for your portfolio. Replace these cards with your own games as you
-            build them.
+            
           </p>
         </div>
 
@@ -219,13 +213,11 @@ function SkillsSection() {
     "Unity",
     "C#",
     "Game Development",
-    "Godot",
-    "GDScript",
     "Level Design",
     "Prototyping",
-    "Git",
+    
     "Game Design",
-    "Blender Basics",
+    
   ];
 
   return (
@@ -235,8 +227,7 @@ function SkillsSection() {
           Skills & <span className="text-primary">Tools</span>
         </h2>
         <p className="mx-auto mb-10 max-w-xl text-muted-foreground">
-          A starter list of skills. Update these tags to match what you actually know or are
-          learning.
+          
         </p>
 
         <div className="flex flex-wrap justify-center gap-3">
@@ -263,27 +254,17 @@ function ContactSection() {
           Get In <span className="text-primary">Touch</span>
         </h2>
         <p className="mx-auto mb-10 max-w-xl text-muted-foreground">
-          Replace the placeholders below with your real email, GitHub, and LinkedIn links.
+          
         </p>
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button asChild variant="outline" size="lg">
-            <a href="mailto:your.email@example.com" className="gap-2">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kiranpraveen997@gmail.com" target="_blank" rel="noopener noreferrer" className="gap-2">
               <Mail className="h-4 w-4" />
-              your.email@example.com
+              kiranpraveen997@gmail.com
             </a>
           </Button>
-          <Button asChild variant="outline" size="lg">
-            <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="gap-2"
-            >
-              <Github className="h-4 w-4" />
-              GitHub
-            </a>
-          </Button>
+          
           <Button asChild variant="outline" size="lg">
             <a
               href="https://linkedin.com/in/yourusername"
